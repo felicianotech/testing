@@ -28,7 +28,7 @@ jobs:
       - run: ./scripts/rebuild_es_index.sh
 
       # Update to newest TLS certs
-      - run: sudo apt-get install -y ca-certificates
+      - run: sudo apt-get update && sudo apt-get install -y ca-certificates
 
       # Install Nomad
       - run: sudo ./scripts/install_nomad.sh
