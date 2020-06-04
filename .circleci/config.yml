@@ -27,6 +27,9 @@ jobs:
       # Update ES models
       - run: ./scripts/rebuild_es_index.sh
 
+      # Update to newest TLS certs
+      - run: sudo apt-get install -y ca-certificates
+
       # Install Nomad
       - run: sudo ./scripts/install_nomad.sh
         # Start Nomad and register jobs.
